@@ -1,12 +1,12 @@
 
 
-def call(String image_name, String credential) {
+def call(String credential) {
     // assert (image_name && username && password)
     withCredentials([
         usernamePassword(
             credentialsId: credential,
-            usernameVariable: "REGESTRY_LOGIN",
-            passwordVariable: "REGESTRY_PASSWORD"
+            usernameVariable: 'REGESTRY_LOGIN',
+            passwordVariable: 'REGESTRY_PASSWORD'
         )  
     ]) {
         sh """
